@@ -39,7 +39,7 @@
 	          <div class="col-md-8 ftco-animate">
 	          	<div class="text mb-5 pb-5">
 		            <h1 class="mb-3">Experience Epic Beauty</h1>
-		            <h2>Roxandrea Hotel &amp; Resort</h2>
+		            <h2>Lumiere Hotel &amp; Resort</h2>
 	            </div>
 	          </div>
 	        </div>
@@ -168,7 +168,7 @@
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Welcome to Roxandrea Hotel</span>
+          	<span class="subheading">Welcome to Lumiere Hotel</span>
             <h2 class="mb-4">A New Vision of Luxury Hotel</h2>
           </div>
         </div>  
@@ -241,7 +241,7 @@
     	<div class="container-fluid px-0">
     		<div class="row no-gutters justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Roxandrea Rooms</span>
+          	<span class="subheading">Lumiere Rooms</span>
             <h2 class="mb-4">Hotel Master's Rooms</h2>
           </div>
         </div>  
@@ -250,7 +250,7 @@
     				<div class="room-wrap">
     					<div class="img d-flex align-items-center" style="background-image: url(images/bg_3.jpg);">
     						<div class="text text-center px-4 py-4">
-    							<h2>Welcome to <a href="index.jsp">Roxandrea</a> Hotel</h2>
+    							<h2>Welcome to <a href="index.jsp">Lumiere</a> Hotel</h2>
     							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
     						</div>
     					</div>
@@ -668,29 +668,7 @@
     
     <jsp:include page="layouts/footer.jsp"></jsp:include>
     
-  
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <!-- // <script src="js/jquery.timepicker.min.js"></script> -->
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+    <jsp:include page="layouts/scripts.jsp"></jsp:include> 
     
   </body>
 </html>
