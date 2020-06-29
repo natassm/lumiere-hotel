@@ -1,4 +1,4 @@
-f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +30,7 @@ f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 2,520,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms-single.jsp">Suite Room</a></h3>
 	    						<p class="pt-1"><a href="rooms-single.jsp" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -43,7 +43,7 @@ f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 500,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms-single.jsp">Classic Room</a></h3>
 	    						<p class="pt-1"><a href="rooms-single.jsp" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -57,7 +57,7 @@ f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     					<div class="half right-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">start from IDR 400,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms-single.jsp">Family Room</a></h3>
 	    						<p class="pt-1"><a href="rooms-single.jsp" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -70,7 +70,7 @@ f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     					<div class="half right-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">start from IDR 600,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms-single.jsp">Deluxe Room</a></h3>
 	    						<p class="pt-1"><a href="rooms-single.jsp" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -84,7 +84,7 @@ f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 1,080,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms-single.jsp">Luxury Room</a></h3>
 	    						<p class="pt-1"><a href="rooms-single.jsp" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -97,7 +97,7 @@ f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 750,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms-single.jsp">Superior Room</a></h3>
 	    						<p class="pt-1"><a href="rooms-single.jsp" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>

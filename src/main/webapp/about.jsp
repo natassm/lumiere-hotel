@@ -31,8 +31,8 @@
 	            </div>
 	          </div>
 	          <div class="pb-md-5">
-							<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didnt take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+							<p>Lumiere Hotel is the perfect place to discover the treasures of North Sumatera; from nature and fresh mountain breeze where our hotel resort is located, the comfy interiors of an exclusive residence, or the adventure of rides and games in Funland Theme Park. There is something for everyone in the family for taking on a journey along the breathtaking sceneries to reach Lumiere Hotel</p>
+							<p>Lumiere Hotel you full-service hotel facility that offers luxurious amenities, full-service accomodations, on-site resaturants, and the highest level of hospitality. Each room at  follows the minimalist design yet comfortable, maximizing the best of the nature to create a zen-like atmosphere.</p>
 							<ul class="ftco-social d-flex">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -161,8 +161,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">The place that bring our dream became reality. Room is great and huge. Breakfast many selection. Very recommended.</p>
+		                    <p class="name">FIRMAN HARIYADIANTO</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -176,8 +176,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">I travelled with my 2 children (5 and 6 years old). It would be good if we are provided inc breakfast for all children without any extra cost since they are still small. I don't think they can eat as much as adults.</p>
+		                    <p class="name">Andy Rahmayadi</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -191,8 +191,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">Very good hotel. We had great experience with family there. Clean room, nice and friendly staff, good lansdcape, nice breakfast and have some facilities too</p>
+		                    <p class="name">Effendi  Djuandi</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -206,8 +206,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">The best hotel in this region,flawless and great places to vring your family. Kid would love to spend time in this hotel.</p>
+		                    <p class="name">Lau Mayang</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -221,8 +221,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">The place was really clean and the resort have a nice pool in the back and it has night lounge. The place have a nice security</p>
+		                    <p class="name">Wiwin Destiana</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
