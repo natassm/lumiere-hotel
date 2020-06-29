@@ -251,7 +251,7 @@
     					<div class="img d-flex align-items-center" style="background-image: url(images/bg_3.jpg);">
     						<div class="text text-center px-4 py-4">
     							<h2>Welcome to <a href="index.jsp">Lumiere</a> Hotel</h2>
-    							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    							<p>At 4 stars rating, Lumiere offers you full service restaurants, luxurious amenities, personalized service, meeting room fully equipped with business facilities, and Grand Ballroom to host lavish function.</p>
     						</div>
     					</div>
     				</div>
@@ -262,7 +262,7 @@
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 2,520,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.jsp">Suite Room</a></h3>
 	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -276,7 +276,7 @@
     					<div class="half right-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">start from IDR 400,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.jsp">Family Room</a></h3>
 	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -289,7 +289,7 @@
     					<div class="half right-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">start from IDR 600,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.jsp">Deluxe Room</a></h3>
 	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -303,7 +303,7 @@
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 1,080,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.jsp">Luxury Room</a></h3>
 	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -316,7 +316,7 @@
     					<div class="half left-arrow d-flex align-items-center">
     						<div class="text p-4 p-xl-5 text-center">
     							<p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+    							<p class="mb-0"><span class="price mr-1">IDR 750,000</span> <span class="per">per night</span></p>
 	    						<h3 class="mb-3"><a href="rooms.jsp">Superior Room</a></h3>
 	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
     						</div>
@@ -350,8 +350,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">The place that bring our dream became reality. Room is great and huge. Breakfast many selection. Very recommended.</p>
+		                    <p class="name">FIRMAN HARIYADIANTO</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -365,8 +365,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">I travelled with my 2 children (5 and 6 years old). It would be good if we are provided inc breakfast for all children without any extra cost since they are still small. I don't think they can eat as much as adults.</p>
+		                    <p class="name">Andy Rahmayadi</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -380,8 +380,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">Very good hotel. We had great experience with family there. Clean room, nice and friendly staff, good landscape, nice breakfast and have some facilities too.</p>
+		                    <p class="name">Effendi  Djuandi</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -395,8 +395,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">The best hotel in this region,flawless and great places to vring your family. Kid would love to spend time in this hotel.</p>
+		                    <p class="name">Lau Mayang</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -410,8 +410,8 @@
 		                  </div>
 		                  <div class="text text-center">
 		                  	<p class="star"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
-		                    <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		                    <p class="name">Nathan Smith</p>
+		                    <p class="mb-4">The place was really clean and the resort have a nice pool in the back and it has night lounge. The place have a nice security</p>
+		                    <p class="name">Wiwin Destiana</p>
 		                    <span class="position">Guests</span>
 		                  </div>
 		                </div>
@@ -456,50 +456,50 @@
 				<div class="row">
         	<div class="col-md-6">
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(images/menu-1.jpg);"></div>
+        			<div class="img order-md-last" style="background-image: url(images/rendang.jpg);"></div>
         			<div class="desc pr-3 text-md-right">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Grilled Crab with Onion</span></h3>
-	        				<span class="price price-left">$20.00</span>
+	        				<h3 class="order-md-last heading-left"><span>Rendang</span></h3>
+	        				<span class="price price-left">IDR60,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>Padang nese traditional food with beef</p>
 	        			</div>
         			</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(images/menu-2.jpg);"></div>
+        			<div class="img order-md-last" style="background-image: url(images/satey.jpg);"></div>
         			<div class="desc pr-3 text-md-right">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Grilled Beef with potatoes</span></h3>
-	        				<span class="price price-left">$29.00</span>
+	        				<h3 class="order-md-last heading-left"><span>Satay Lilit</span></h3>
+	        				<span class="price price-left">IDR 35,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>Sate from Bali made of chopped beef or chicken then mixed with grated coconut, coconut milk, lime, onion, and pepper. </p>
 	        			</div>
 	        		</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(images/menu-3.jpg);"></div>
+        			<div class="img order-md-last" style="background-image: url(images/betawi.jpg);"></div>
         			<div class="desc pr-3 text-md-right">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Grilled Beef with potatoes</span></h3>
-	        				<span class="price price-left">$20.00</span>
+	        				<h3 class="order-md-last heading-left"><span>Soto Betawi</span></h3>
+	        				<span class="price price-left">IDR 25,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p> prepared with beef, which is boiled with aromatic herbs like lemongrass and Indonesian bay leaves, and flavored with candlenut, galangal, garlic, and shallots</p>
 	        			</div>
 	        		</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img order-md-last" style="background-image: url(images/menu-4.jpg);"></div>
+        			<div class="img order-md-last" style="background-image: url(images/ketoprak.jpg);"></div>
         			<div class="desc pr-3 text-md-right">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3 class="order-md-last heading-left"><span>Grilled Beef with potatoes</span></h3>
-	        				<span class="price price-left">$20.00</span>
+	        				<h3 class="order-md-last heading-left"><span>Ketoprak</span></h3>
+	        				<span class="price price-left">IDR 15,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>a mix of bean-sprout, deep-fried tofu, onion, eggs with special peanut sauce.</p>
 	        			</div>
 	        		</div>
         		</div>
@@ -507,50 +507,50 @@
 
         	<div class="col-md-6">
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/menu-5.jpg);"></div>
+        			<div class="img" style="background-image: url(images/ayam.jpg);"></div>
         			<div class="desc pl-3">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Grilled Beef with potatoes</span></h3>
-	        				<span class="price">$49.91</span>
+	        				<h3><span>Soto Ayam</span></h3>
+	        				<span class="price">IDR 25,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>chicken soup which is yellow and slightly spicy, normally served with lontong or nasi empit or ketupat (rice cakes) and vermicelli (rice noodles).</p>
 	        			</div>
 	        		</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/menu-6.jpg);"></div>
+        			<div class="img" style="background-image: url(images/asem.jpg);"></div>
         			<div class="desc pl-3">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Ultimate Overload</span></h3>
-	        				<span class="price">$20.00</span>
+	        				<h3><span>Sayur Asem</span></h3>
+	        				<span class="price">IDR 15,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>a tamarind soup made from peanuts, young jackfruit, melinjo, long beans, chayote, corn and meat stock (normally beef) and of course tamarind.</p>
 	        			</div>
 	        		</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/menu-7.jpg);"></div>
+        			<div class="img" style="background-image: url(images/bakso.jpg);"></div>
         			<div class="desc pl-3">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Grilled Beef with potatoes</span></h3>
-	        				<span class="price">$20.00</span>
+	        				<h3><span>Bakso</span></h3>
+	        				<span class="price">IDR 25,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>meatball made from beef surimi (meat paste, normally beef, with some tapioca flour)</p>
 	        			</div>
 	        		</div>
         		</div>
         		<div class="pricing-entry d-flex ftco-animate">
-        			<div class="img" style="background-image: url(images/menu-8.jpg);"></div>
+        			<div class="img" style="background-image: url(images/lotek.jpg);"></div>
         			<div class="desc pl-3">
 	        			<div class="d-md-flex text align-items-center">
-	        				<h3><span>Ham &amp; Pineapple</span></h3>
-	        				<span class="price">$20.00</span>
+	        				<h3><span>Lotek</span></h3>
+	        				<span class="price">IDR 15,000</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p>Indonesian salad, a combination of boiled vegetables doused generously with peanut sauce dressing</p>
 	        			</div>
 	        		</div>
         		</div>

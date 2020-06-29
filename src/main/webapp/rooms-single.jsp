@@ -34,19 +34,19 @@
           			</div>
           		</div>
           		<div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
-          			<h2 class="mb-4">Luxury Room <span>- (10 Available rooms)</span></h2>
-    						<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+          			<h2 class="mb-4">Deluxe Room <span>- (10 Available rooms)</span></h2>
+    						<p>Deluxe room offering space equipped with twin beds and double beds and decorated in contemporary classic design with a bed sitting, bathroom with shower stall, domestic and international TV channels. Private balconies with outdoor sitting features.</p>
     						<div class="d-md-flex mt-5 mb-5">
     							<ul class="list">
 	    							<li><span>Max:</span> 3 Persons</li>
 	    							<li><span>Size:</span> 45 m2</li>
 	    						</ul>
 	    						<ul class="list ml-md-5">
-	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>View:</span>Pine Tree</li>
 	    							<li><span>Bed:</span> 1</li>
 	    						</ul>
     						</div>
-    						<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+    						<p>With the view overlooking pine tree and garden. Deluxe Twin have the extra space and amenities you need to make your leisure stay feel more special and your business stay more productive. These rooms are furnished with two large single beds, a spacious work desk and a state of the art LCD TV.</p>
           		</div>
           		<div class="col-md-12 room-single ftco-animate mb-5 mt-4">
           			<h3 class="mb-4">Take A Tour</h3>
@@ -172,8 +172,8 @@
             </div>
 
             <div class="sidebar-box ftco-animate">
-              <h3>Paragraph</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+              <h3>Lemiere Hotel</h3>
+              <p>In the most vibrant part of Northern Sumatera, a Cosmopolitan place within the city of Medan, discover the Lemiere Hotel, surrounding a peaceful and romantic garden. Warm hospitality and exclusive setting combining fine architecture with comfort and elegance.</p>
             </div>
           </div>
         </div>
