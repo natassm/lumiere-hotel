@@ -112,9 +112,27 @@
               </a>
           </li>
           <li>
+            <a href="add_checkin.jsp">
+              <i class="fa fa-bars"></i>
+              <span>Add Check In </span>
+              </a>
+          </li>
+          <li>
             <a href="checkin.jsp">
               <i class="fa fa-bars"></i>
               <span>Check In </span>
+              </a>
+          </li>
+          <li>
+            <a href="add_checkout.jsp">
+              <i class="fa fa-bars"></i>
+              <span>Add Check Out </span>
+              </a>
+          </li>
+          <li>
+            <a href="checkout.jsp">
+              <i class="fa fa-bars"></i>
+              <span>Check Out </span>
               </a>
           </li>
         </ul>
@@ -217,7 +235,8 @@
             Licensing information: https://templatemag.com/license/
           -->
           Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
-        
+        </div>
+        </div>
     </footer>
     <!--footer end-->
   </section>
