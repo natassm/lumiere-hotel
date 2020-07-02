@@ -89,8 +89,8 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.jsp"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <p class="centered"><a href="profile.jsp"><img src="img/ui-sam.png" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Admin</h5>
           <li class="mt">
             <a class="active" href="index.jsp">
               <i class="fa fa-dashboard"></i>
@@ -174,37 +174,37 @@
               <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">ID</label>
                   <div class="col-sm-10">
-                    <input type="text" id="uid" class="form-control">
+                    <input type="text" id="uid" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomType" class="form-control">
+                    <input type="text" id="roomType" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Number </label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomNumber" class="form-control">
+                    <input type="text" id="roomNumber" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Bedtype</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomBedType" class="form-control">
+                    <input type="text" id="roomBedType" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Floor</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomFloor" class="form-control">
+                    <input type="text" id="roomFloor" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomPrice" class="form-control">
+                    <input type="text" id="roomPrice" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
