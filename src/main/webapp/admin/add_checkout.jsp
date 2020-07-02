@@ -25,13 +25,31 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
   <script src="lib/chart-master/Chart.js"></script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestone.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
 
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+		  apiKey: "AIzaSyDsQMve4d-H93DxtFNmL4honnXCQC4CP5U",
+		    authDomain: "lumiere-hotel.firebaseapp.com",
+		    databaseURL: "https://lumiere-hotel.firebaseio.com",
+		    projectId: "lumiere-hotel",
+		    storageBucket: "lumiere-hotel.appspot.com",
+		    messagingSenderId: "836998359051",
+		    appId: "1:836998359051:web:c82ab00adee1bc00b07f0e",
+		    measurementId: "G-CCNVD28W02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </head>
 
 <body>
@@ -147,51 +165,99 @@
     <section id="main-content">
       <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Manage Check Out</h3>
+        
+        <!-- INLINE FORM ELELEMNTS -->
+         <div class="row mt">
+            <div class="col-lg-12">
+              <div class="form-panel">
+                <h4 class="mb"><i class="fa fa-angle-right"></i>Check Out Table</h4>
+                <form class="form-inline" role="form">
+                    <div class="table Responsive">
+                    <table id="requestCIT" class="table table-bordered" width="100%" cellspacing="0">
+                        <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Email</td>
+                        <td>Check In Date</td>
+                        <td>Check Out Date</td>
+                        <td>Room Type</td>
+                        <td>Room Number</td>
+                        <td>Room Price</td>
+                        </tr>
+                        </table>
+                    </div>
+                </form>
+              </div>
+              <!-- /form-panel -->
+            </div>
+            <!-- /col-lg-12 -->
+          </div>
+          <!-- /row -->
+          
         <!-- BASIC FORM ELELEMNTS -->
         <div class="row mt">
           <div class="col-lg-12">
             <div class="form-panel">
-              <h4 class="mb"><i class="fa fa-angle-right"></i> Add Check Out </h4>
+              <h4 class="mb"><i class="fa fa-angle-right"></i>Add Check Out</h4>
               <form class="form-horizontal style-form" method="get">
-                <div class="form-group">
-                    <label class="control-label col-md-3">Check Out Date</label>
-                    <div class="col-md-3 col-xs-11">
-                      <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
-                      
-                    </div>
-                  </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Number </label>
+              <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">ID</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="uid" class="form-control" readonly="readonly">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Guest Name</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="guestName" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Check In ID</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Guest Phone</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="guestPhone" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Stay Duration </label>
+                  <label class="col-sm-2 col-sm-2 control-label">Guest Email</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="guestEmail" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-2 col-sm-2 control-label"> Price Total </label>
+                    <label class="col-sm-2 col-sm-2 control-label">Check In Date</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control">
+                      <input type="text" id="checkinDate" class="form-control">
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-theme">Add Check Out</button>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Check Out Date</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="checkoutDate" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomType" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomNumber" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Price (/night)</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomPrice" class="form-control">
+                  </div>
+                </div>
                 
+                <input type="button" value="Save" onclick="save_user();" class="btn btn-warning btn-user" />
+                <input type="button" value="Delete Check In" onclick="delete_user();" class="btn btn-warning btn-user" />
               </form>
             </div>
           </div>
@@ -243,8 +309,120 @@
   <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
   <script src="lib/form-component.js"></script>
+  
+ <script>
+ 
+ var requestCITable = document.getElementById('requestCIT');
+ var databaseRefCI = firebase.database().ref('checkinRequest/');
+ var rowIndex = 1;
+ 
+ databaseRefCI.once('value', function(snapshot) {
+	 snapshot.forEach(function(childSnapshot) {
+	  	var childKey = childSnapshot.key;
+	  	var childData = childSnapshot.val();
+	  	var row = requestCITable.insertRow(rowIndex);
+	  	var cellId = row.insertCell(0);
+	  	var cellName = row.insertCell(1);
+	  	var cellPhone = row.insertCell(2);
+	  	var cellEmail = row.insertCell(3);
+	  	var cellCheckinDate = row.insertCell(4);
+	  	var cellCheckoutDate = row.insertCell(5);
+	  	var cellRoomType = row.insertCell(6);
+	  	var cellRoomNumber = row.insertCell(7);
+	  	var cellRoomPrice = row.insertCell(8);
+	  	cellId.appendChild(document.createTextNode(childKey));
+	  	cellName.appendChild(document.createTextNode(childData.name));
+	  	cellPhone.appendChild(document.createTextNode(childData.phone));
+	  	cellEmail.appendChild(document.createTextNode(childData.email));
+	  	cellCheckinDate.appendChild(document.createTextNode(childData.checkinDate));
+	  	cellCheckoutDate.appendChild(document.createTextNode(childData.checkoutDate));
+	  	cellRoomType.appendChild(document.createTextNode(childData.roomType));
+	  	cellRoomNumber.appendChild(document.createTextNode(childData.roomNumber));
+	  	cellRoomPrice.appendChild(document.createTextNode(childData.roomPrice));
+	  	rowIndex = rowIndex + 1;
+	  	});
+	  
+	  var table = document.getElementById("requestCIT");
+	  var rows = table.getElementsByTagName("tr");
+	  for (i = 0; i < rows.length; i++) {
+	  var currentRow = table.rows[i];
+	  var createClickHandler = function(row) {
+	  return function() {
+	  var cell1 = row.getElementsByTagName("td")[0];
+	  var cell2 = row.getElementsByTagName("td")[1];
+	  var cell3 = row.getElementsByTagName("td")[2];
+	  var cell4 = row.getElementsByTagName("td")[3];
+	  var cell5 = row.getElementsByTagName("td")[4];
+	  var cell6 = row.getElementsByTagName("td")[5];
+	  var cell7 = row.getElementsByTagName("td")[6];
+	  var cell8 = row.getElementsByTagName("td")[7];
+	  var cell9 = row.getElementsByTagName("td")[8];
+	  var id = cell1.innerHTML;
+	  var guest_name = cell2.innerHTML;
+	  var guest_phone = cell3.innerHTML;
+	  var guest_email = cell4.innerHTML;
+	  var checkin_date = cell5.innerHTML;
+	  var checkout_date = cell6.innerHTML;
+	  var room_type = cell7.innerHTML;
+	  var room_number = cell8.innerHTML;
+	  var room_price = cell9.innerHTML;
+	  document.getElementById('uid').value = id;
+	  document.getElementById('guestName').value = guest_name;
+	  document.getElementById('guestPhone').value = guest_phone;
+	  document.getElementById('guestEmail').value = guest_email;
+	  document.getElementById('checkinDate').value = checkin_date;
+	  document.getElementById('checkoutDate').value = checkout_date;
+	  document.getElementById('roomType').value = room_type;
+	  document.getElementById('roomNumber').value = room_number;
+	  document.getElementById('roomPrice').value = room_price;
+	  };
+	  };
+	  currentRow.onclick = createClickHandler(currentRow);
+	  }
+	  });
+
+function save_user(){
+var name = document.getElementById('guestName').value;
+var phone = document.getElementById('guestPhone').value;
+var email = document.getElementById('guestEmail').value;
+var checkinDate = document.getElementById('checkinDate').value;
+var checkoutDate = document.getElementById('checkoutDate').value;
+var roomType = document.getElementById('roomType').value;
+var roomNumber = document.getElementById('roomNumber').value;
+var roomPrice = document.getElementById('roomPrice').value;
+var uid = firebase.database().ref().child('checkoutRequest').push().key;
+var data = {
+name: name,
+phone: phone,
+email: email,
+checkinDate: checkinDate,
+checkoutDate: checkOutDate,
+roomType: roomType,
+roomNumber: roomNumber,
+roomPrice: roomPrice
+}
+var updates = {};
+updates['/checkoutRequest/' + uid] = data;
+firebase.database().ref().update(updates);
+alert('checkout created successfully!');
+reload_page();
+}
+ 
+function delete_user(){
+	  var uid = document.getElementById('uid').value;
+	  firebase.database().ref().child('/checkinRequest/' + uid).remove();
+	  alert('room deleted successfully!');
+	  reload_page();
+	  }
+	  function reload_page(){
+	  window.location.reload();
+	  }
+ 
+ function reload_page(){
+ window.location.reload();
+ }
+  </script>
 
 </body>
 
 </html>
-    
