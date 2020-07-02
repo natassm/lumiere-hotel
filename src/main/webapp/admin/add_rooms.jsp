@@ -89,8 +89,8 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.jsp"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <p class="centered"><a href="profile.jsp"><img src="img/ui-sam.png" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Admin</h5>
           <li class="mt">
             <a class="active" href="index.jsp">
               <i class="fa fa-dashboard"></i>
@@ -174,7 +174,15 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomType" class="form-control">
+                  <select id="roomType" class="form-control">
+<option value="">Choose Room Type</option>
+<option value="Suite Room">Suite Room</option>
+<option value="Classic Room">Classic Room</option>
+<option value="Family Room">Family Room</option>
+<option value="Deluxe Room">Deluxe Room</option>
+<option value="Luxury Room">Luxury Room</option>
+<option value="Superior Room">Superior Room</option>
+</select>
                   </div>
                 </div>
                 <div class="form-group">
@@ -186,7 +194,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Bed Type</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomBedType" class="form-control">
+                  <select id="roomBedType" class="form-control">
+<option value="">Choose Room Bed Type</option>
+<option value="Single Bed">Single Bed</option>
+<option value="Double Bed">Double Bed</option>
+<option value="Twin Bed">Twin Bed</option>
+<option value="King Bed">King Bed</option>
+</select>
                   </div>
                 </div>
                 <div class="form-group">
@@ -204,7 +218,11 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Status</label>
                   <div class="col-sm-10">
-                    <input type="text" id="roomStatus" class="form-control">
+                  <select id="roomStatus" class="form-control">
+<option value="">Choose Room Status</option>
+<option value="0">0</option>
+<option value="1">1</option>
+</select>
                   </div>
                 </div>
                 <input type="button" value="Add Room" onclick="save_user();" class="btn btn-theme"/>
@@ -263,38 +281,6 @@
   <script src="lib/form-component.js"></script>
   
   <script>
-  var databaseRef = firebase.database().ref('room/');
-  function save_user(){
-	  var roomType = document.getElementById('roomType').value;
-	  var roomNumber = document.getElementById('roomNumber').value;
-	  var roomBedType = document.getElementById('roomBedType').value;
-	  var roomFloor = document.getElementById('roomFloor').value;
-	  var roomPrice = document.getElementById('roomPrice').value;
-	  var roomStatus = document.getElementById('roomStatus').value;
-	  
-	  var idKey = firebase.database().ref.child('room').push.key;
-	  
-	  var data = {
-			  roomType: roomType,
-			  roomNumber: roomNumber,
-			  roomBedType: roomBedType,
-			  roomFloor: roomFloor,
-			  roomPrice: roomPrice,
-			  roomStatus: roomStatus
-	  }
-	  
-	  var updates = {};
-	  updates['/room/' + idKey] = data;
-	  firebase.database().ref().update(updates);
-	  alert('room created successfully!');
-	  reload_page();
-	  }
-	  function reload_page(){
-	  window.location.reload();
-	  }
-  </script>
-  
-  <script>
 var databaseRef = firebase.database().ref('room/');
 function save_user(){
 var roomType = document.getElementById('roomType').value;
@@ -322,7 +308,5 @@ function reload_page(){
 window.location.reload();
 }
 </script>
-
 </body>
-
 </html>

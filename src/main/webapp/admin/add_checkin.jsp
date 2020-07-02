@@ -71,8 +71,8 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.jsp"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <p class="centered"><a href="profile.jsp"><img src="img/ui-sam.png" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Admin</h5>
           <li class="mt">
             <a class="active" href="index.jsp">
               <i class="fa fa-dashboard"></i>
@@ -147,51 +147,113 @@
     <section id="main-content">
       <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Manage Check In</h3>
+        
+        <!-- INLINE FORM ELELEMNTS -->
+         <div class="row mt">
+            <div class="col-lg-12">
+              <div class="form-panel">
+                <h4 class="mb"><i class="fa fa-angle-right"></i>Request Check In Table</h4>
+                <form class="form-inline" role="form">
+                    <div class="table Responsive">
+                    <table id="requestCIT" class="table table-bordered" width="100%" cellspacing="0">
+                        <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Phone</td>
+                        <td>Email</td>
+                        <td>Check In Date</td>
+                        <td>Check Out Date</td>
+                        <td>Room Type</td>
+                        </tr>
+                        </table>
+                    </div>
+                </form>
+              </div>
+              <!-- /form-panel -->
+            </div>
+            <!-- /col-lg-12 -->
+          </div>
+          <!-- /row -->
+          
         <!-- BASIC FORM ELELEMNTS -->
         <div class="row mt">
           <div class="col-lg-12">
             <div class="form-panel">
-              <h4 class="mb"><i class="fa fa-angle-right"></i> Add Check In </h4>
+              <h4 class="mb"><i class="fa fa-angle-right"></i> Add Check In</h4>
               <form class="form-horizontal style-form" method="get">
-                <div class="form-group">
-                    <label class="control-label col-md-3">Check In Date</label>
-                    <div class="col-md-3 col-xs-11">
-                      <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
-                      
-                    </div>
-                  </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Number </label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Guest Name</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="guestName" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Guest Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="guestName" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2 col-md-2">Check In Date</label>
+                    <div class="col-md-3 col-xs-11">
+                      <input type="text" id="checkinDate" class="form-control">
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Check Out Date</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="checkoutDate" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomNumber" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomType" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">CheckIn Status</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomPrice" class="form-control">
                   </div>
                 </div>
                 <button type="submit" class="btn btn-theme">Add Check In</button>
-                
               </form>
             </div>
           </div>
           <!-- col-lg-12-->
         </div>
         <!-- /row -->
+        
+        <div class="row mt">
+          <div class="col-lg-12">
+            <div class="form-panel">
+              <h4 class="mb"><i class="fa fa-angle-right"></i>Change Room Status</h4>
+              <form class="form-horizontal style-form" method="get">
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomNumber2" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Status</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomStatus" class="form-control">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-theme">Change Room Status</button>
+              </form>
+            </div>
+          </div>
+          <!-- col-lg-12-->
+        </div>
 
          
         
@@ -237,6 +299,64 @@
   <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
   <script src="lib/form-component.js"></script>
+  
+  <script>
+  var requestCITable = document.getElementById('requestCIT');
+  var databaseRef = firebase.database().ref('checkinRequest/');
+  var rowIndex = 1;
+  
+  databaseRef.once('value', function(snapshot) {
+	  snapshot.forEach(function(childSnapshot) {
+	  	var childKey = childSnapshot.key;
+	  	var childData = childSnapshot.val();
+	  	var row = requestCITable.insertRow(rowIndex);
+	  	var cellId = row.insertCell(0);
+	  	var cellName = row.insertCell(1);
+	  	var cellPhone = row.insertCell(2);
+	  	var cellEmail = row.insertCell(3);
+	  	var cellCheckinDate = row.insertCell(4);
+	  	var cellCheckoutDate = row.insertCell(5);
+	  	var cellRoomType = row.insertCell(6);
+	  	cellId.appendChild(document.createTextNode(childKey));
+	  	cellName.appendChild(document.createTextNode(childData.name));
+	  	cellPhone.appendChild(document.createTextNode(childData.phone));
+	  	cellEmail.appendChild(document.createTextNode(childData.email));
+	  	cellCheckinDate.appendChild(document.createTextNode(childData.checkinDate));
+	  	cellCheckoutDate.appendChild(document.createTextNode(childData.checkoutDate));
+	  	cellRoomType.appendChild(document.createTextNode(childData.roomType));
+	  	rowIndex = rowIndex + 1;
+	  	});
+	  
+	  var table = document.getElementById("requestCIT");
+	  var rows = table.getElementsByTagName("tr");
+	  for (i = 0; i < rows.length; i++) {
+	  var currentRow = table.rows[i];
+	  var createClickHandler = function(row) {
+	  return function() {
+	  var cell1 = row.getElementsByTagName("td")[0];
+	  var cell2 = row.getElementsByTagName("td")[1];
+	  var cell3 = row.getElementsByTagName("td")[2];
+	  var cell4 = row.getElementsByTagName("td")[3];
+	  var cell5 = row.getElementsByTagName("td")[4];
+	  var cell6 = row.getElementsByTagName("td")[5];
+	  var id = cell1.innerHTML;
+	  var name = cell2.innerHTML;
+	  var email = cell3.innerHTML;
+	  var checkinDate = cell4.innerHTML;
+	  var checkoutDate = cell5.innerHTML;
+	  var roomType = cell6.innerHTML;
+	  document.getElementById('uid').value = id;
+	  document.getElementById('guestName').value = name;
+	  document.getElementById('guestEmail').value = email;
+	  document.getElementById('checkinDate').value = checkinDate;
+	  document.getElementById('checkoutDate').value = checkoutDate;
+	  document.getElementById('roomType').value = roomType;
+	  };
+	  };
+	  currentRow.onclick = createClickHandler(currentRow);
+	  }
+	  });
+  </script>
 
 </body>
 
