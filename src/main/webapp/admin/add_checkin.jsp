@@ -25,13 +25,31 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
   <script src="lib/chart-master/Chart.js"></script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestone.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
 
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+		  apiKey: "AIzaSyDsQMve4d-H93DxtFNmL4honnXCQC4CP5U",
+		    authDomain: "lumiere-hotel.firebaseapp.com",
+		    databaseURL: "https://lumiere-hotel.firebaseio.com",
+		    projectId: "lumiere-hotel",
+		    storageBucket: "lumiere-hotel.appspot.com",
+		    messagingSenderId: "836998359051",
+		    appId: "1:836998359051:web:c82ab00adee1bc00b07f0e",
+		    measurementId: "G-CCNVD28W02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </head>
 
 <body>
@@ -164,6 +182,8 @@
                         <td>Check In Date</td>
                         <td>Check Out Date</td>
                         <td>Room Type</td>
+                        <td>Room Number</td>
+                        <td>Room Price</td>
                         </tr>
                         </table>
                     </div>
@@ -179,7 +199,7 @@
         <div class="row mt">
           <div class="col-lg-12">
             <div class="form-panel">
-              <h4 class="mb"><i class="fa fa-angle-right"></i> Add Check In</h4>
+              <h4 class="mb"><i class="fa fa-angle-right"></i>Add Check In</h4>
               <form class="form-horizontal style-form" method="get">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Guest Name</label>
@@ -188,14 +208,20 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Guest Email</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Guest Phone</label>
                   <div class="col-sm-10">
-                    <input type="text" id="guestName" class="form-control">
+                    <input type="text" id="guestPhone" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-sm-2 col-md-2">Check In Date</label>
-                    <div class="col-md-3 col-xs-11">
+                  <label class="col-sm-2 col-sm-2 control-label">Guest Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="guestEmail" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-sm-2 control-label">Check In Date</label>
+                    <div class="col-sm-10">
                       <input type="text" id="checkinDate" class="form-control">
                     </div>
                   </div>
@@ -206,54 +232,32 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
-                  <div class="col-sm-10">
-                    <input type="text" id="roomNumber" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
                   <div class="col-sm-10">
                     <input type="text" id="roomType" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="roomNumber" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Price (/night)</label>
                   <div class="col-sm-10">
                     <input type="text" id="roomPrice" class="form-control">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-theme">Add Check In</button>
+                
+                <input type="button" value="Update" onclick="update_user();" class="btn btn-warning btn-user" />
+                <input type="button" value="Delete" onclick="delete_user();" class="btn btn-danger btn-user" />
               </form>
             </div>
           </div>
           <!-- col-lg-12-->
         </div>
         <!-- /row -->
-        
-        <div class="row mt">
-          <div class="col-lg-12">
-            <div class="form-panel">
-              <h4 class="mb"><i class="fa fa-angle-right"></i>Change Room Status</h4>
-              <form class="form-horizontal style-form" method="get">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
-                  <div class="col-sm-10">
-                    <input type="text" id="roomNumber2" class="form-control">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Status</label>
-                  <div class="col-sm-10">
-                    <input type="text" id="roomStatus" class="form-control">
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-theme">Change Room Status</button>
-              </form>
-            </div>
-          </div>
-          <!-- col-lg-12-->
-        </div>
 
          
         
@@ -300,13 +304,14 @@
   <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
   <script src="lib/form-component.js"></script>
   
-  <script>
-  var requestCITable = document.getElementById('requestCIT');
-  var databaseRef = firebase.database().ref('checkinRequest/');
-  var rowIndex = 1;
-  
-  databaseRef.once('value', function(snapshot) {
-	  snapshot.forEach(function(childSnapshot) {
+ <script>
+ 
+ var requestCITable = document.getElementById('requestCIT');
+ var databaseRefCI = firebase.database().ref('checkinRequest/');
+ var rowIndex = 1;
+ 
+ databaseRefCI.once('value', function(snapshot) {
+	 snapshot.forEach(function(childSnapshot) {
 	  	var childKey = childSnapshot.key;
 	  	var childData = childSnapshot.val();
 	  	var row = requestCITable.insertRow(rowIndex);
@@ -317,6 +322,8 @@
 	  	var cellCheckinDate = row.insertCell(4);
 	  	var cellCheckoutDate = row.insertCell(5);
 	  	var cellRoomType = row.insertCell(6);
+	  	var cellRoomNumber = row.insertCell(7);
+	  	var cellRoomPrice = row.insertCell(8);
 	  	cellId.appendChild(document.createTextNode(childKey));
 	  	cellName.appendChild(document.createTextNode(childData.name));
 	  	cellPhone.appendChild(document.createTextNode(childData.phone));
@@ -324,6 +331,8 @@
 	  	cellCheckinDate.appendChild(document.createTextNode(childData.checkinDate));
 	  	cellCheckoutDate.appendChild(document.createTextNode(childData.checkoutDate));
 	  	cellRoomType.appendChild(document.createTextNode(childData.roomType));
+	  	cellRoomNumber.appendChild(document.createTextNode(childData.roomNumber));
+	  	cellRoomPrice.appendChild(document.createTextNode(childData.roomPrice));
 	  	rowIndex = rowIndex + 1;
 	  	});
 	  
@@ -339,23 +348,65 @@
 	  var cell4 = row.getElementsByTagName("td")[3];
 	  var cell5 = row.getElementsByTagName("td")[4];
 	  var cell6 = row.getElementsByTagName("td")[5];
+	  var cell7 = row.getElementsByTagName("td")[6];
+	  var cell8 = row.getElementsByTagName("td")[7];
+	  var cell9 = row.getElementsByTagName("td")[8];
 	  var id = cell1.innerHTML;
-	  var name = cell2.innerHTML;
-	  var email = cell3.innerHTML;
-	  var checkinDate = cell4.innerHTML;
-	  var checkoutDate = cell5.innerHTML;
-	  var roomType = cell6.innerHTML;
-	  document.getElementById('uid').value = id;
-	  document.getElementById('guestName').value = name;
-	  document.getElementById('guestEmail').value = email;
-	  document.getElementById('checkinDate').value = checkinDate;
-	  document.getElementById('checkoutDate').value = checkoutDate;
-	  document.getElementById('roomType').value = roomType;
+	  var guest_name = cell2.innerHTML;
+	  var guest_phone = cell3.innerHTML;
+	  var guest_email = cell4.innerHTML;
+	  var checkin_date = cell5.innerHTML;
+	  var checkout_date = cell6.innerHTML;
+	  var room_type = cell7.innerHTML;
+	  var room_number = cell8.innerHTML;
+	  var room_price = cell9.innerHTML;
+	  document.getElementById('guestName').value = guest_name;
+	  document.getElementById('guestPhone').value = guest_phone;
+	  document.getElementById('guestEmail').value = guest_email;
+	  document.getElementById('checkinDate').value = checkin_date;
+	  document.getElementById('checkoutDate').value = checkout_date;
+	  document.getElementById('roomType').value = room_type;
+	  document.getElementById('roomNumber').value = room_number;
+	  document.getElementById('roomPrice').value = room_price;
 	  };
 	  };
 	  currentRow.onclick = createClickHandler(currentRow);
 	  }
 	  });
+ 
+ 
+ function update_user(){
+	  var roomType = document.getElementById('roomType').value;
+	  var roomNumber = document.getElementById('roomNumber').value;
+	  var roomBedType = document.getElementById('roomBedType').value;
+	  var roomFloor = document.getElementById('roomFloor').value;
+	  var roomPrice = document.getElementById('roomPrice').value;
+	  var roomStatus = document.getElementById('roomStatus').value;
+	  var uid = document.getElementById('uid').value;
+ var data = {
+		  roomType: roomType,
+		  roomNumber: roomNumber,
+		  roomBedType: roomBedType,
+		  roomFloor: roomFloor,
+		  roomPrice: roomPrice,
+		  roomStatus: roomStatus
+ }
+ var updates = {};
+ updates['/room/' + uid] = data;
+ firebase.database().ref().update(updates);
+ alert('room updated successfully!');
+ reload_page();
+ }
+
+ function delete_user(){
+ var uid = document.getElementById('uid').value;
+ firebase.database().ref().child('/room/' + uid).remove();
+ alert('room deleted successfully!');
+ reload_page();
+ }
+ function reload_page(){
+ window.location.reload();
+ }
   </script>
 
 </body>
