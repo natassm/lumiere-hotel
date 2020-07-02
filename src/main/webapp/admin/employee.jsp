@@ -112,9 +112,27 @@
               </a>
           </li>
           <li>
+            <a href="add_checkin.jsp">
+              <i class="fa fa-bars"></i>
+              <span>Add Check In </span>
+              </a>
+          </li>
+          <li>
             <a href="checkin.jsp">
               <i class="fa fa-bars"></i>
               <span>Check In </span>
+              </a>
+          </li>
+          <li>
+            <a href="add_checkout.jsp">
+              <i class="fa fa-bars"></i>
+              <span>Add Check Out </span>
+              </a>
+          </li>
+          <li>
+            <a href="checkout.jsp">
+              <i class="fa fa-bars"></i>
+              <span>Check Out </span>
               </a>
           </li>
         </ul>
@@ -200,7 +218,7 @@
             <!-- /col-lg-12 -->
           </div>
           <!-- /row -->
-        
+       </section> 
     <!-- /MAIN CONTENT -->
     <!--main content end-->
     <!--footer start-->
@@ -218,9 +236,7 @@
           -->
           Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
         </div>
-        <a href="form_component.jsp#" class="go-top">
-          <i class="fa fa-angle-up"></i>
-          </a>
+        
       </div>
     </footer>
     <!--footer end-->

@@ -146,50 +146,54 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Manage Employee</h3>
+        <h3><i class="fa fa-angle-right"></i> Manage Check In</h3>
         <!-- BASIC FORM ELELEMNTS -->
         <div class="row mt">
           <div class="col-lg-12">
             <div class="form-panel">
-              <h4 class="mb"><i class="fa fa-angle-right"></i> Add Employee</h4>
+              <h4 class="mb"><i class="fa fa-angle-right"></i> Add Check In </h4>
               <form class="form-horizontal style-form" method="get">
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Full Name</label>
+                    <label class="control-label col-md-3">Check In Date</label>
+                    <div class="col-md-3 col-xs-11">
+                      <input class="form-control form-control-inline input-medium default-date-picker" size="16" type="text" value="">
+                      
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Room Number </label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Gender </label>
+                  <label class="col-sm-2 col-sm-2 control-label">Guest Name</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Identity Card</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Address</label>
+                  <label class="col-sm-2 col-sm-2 control-label">CheckIn Status</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Phone Number</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-theme">Add Employee</button>
+                <button type="submit" class="btn btn-theme">Add Check In</button>
+                
               </form>
             </div>
           </div>
           <!-- col-lg-12-->
         </div>
         <!-- /row -->
+
+         
         
     <!-- /MAIN CONTENT -->
     <!--main content end-->
@@ -208,7 +212,8 @@
           -->
           Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
         </div>
-        </div>
+        
+      </div>
     </footer>
     <!--footer end-->
   </section>
