@@ -11,16 +11,11 @@
   
   <jsp:include page="layouts/navbar.jsp"></jsp:include>
   
-		
-
-		<section class="site-hero inner-page overlay" style="background-image: url(img/slider-5.jpg)" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row site-hero-inner justify-content-center align-items-center text-center">
-          <div class="col-md-10 text-center" data-aos="fade-up">
-            <h1 class="heading">Reservation</h1>
-          </div>
-        </div>
-      </div>
+  <jsp:include page="layouts/slider.jsp">
+    	<jsp:param value="Reservation Form" name="title"/>
+    </jsp:include>
+    
+    <br><br><br>
 
       <a class="mouse smoothscroll" href="#next">
       </a>

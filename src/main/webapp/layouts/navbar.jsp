@@ -11,7 +11,6 @@
 	          <li class="nav-item"><a href="rooms.jsp" class="nav-link">Rooms</a></li>
 	          <li class="nav-item"><a href="restaurant.jsp" class="nav-link">Restaurant</a></li>
 	          <li class="nav-item"><a href="about.jsp" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>

@@ -26,12 +26,30 @@
   <link href="css/style-responsive.css" rel="stylesheet">
   <script src="lib/chart-master/Chart.js"></script>
 
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestone.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+		  apiKey: "AIzaSyDsQMve4d-H93DxtFNmL4honnXCQC4CP5U",
+		    authDomain: "lumiere-hotel.firebaseapp.com",
+		    databaseURL: "https://lumiere-hotel.firebaseio.com",
+		    projectId: "lumiere-hotel",
+		    storageBucket: "lumiere-hotel.appspot.com",
+		    messagingSenderId: "836998359051",
+		    appId: "1:836998359051:web:c82ab00adee1bc00b07f0e",
+		    measurementId: "G-CCNVD28W02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </head>
 
 <body>
@@ -135,44 +153,50 @@
             <div class="form-panel">
               <h4 class="mb"><i class="fa fa-angle-right"></i> Edit Rooms <a href="add_rooms.jsp" class="btn btn-success btn-user">Add New</a></h4>
               <form class="form-horizontal style-form" method="get">
+              <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">ID</label>
+                  <div class="col-sm-10">
+                    <input type="text" id="uid" class="form-control">
+                  </div>
+                </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomType" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Number </label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomNumber" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Bedtype</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomBedType" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Floor</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomFloor" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomPrice" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 col-sm-2 control-label">Room Status</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control">
+                      <input type="text" id="roomStatus" class="form-control">
                     </div>
                   </div>
-                <input type="button" value="Update" onclick="" class="btn btn-warning btn-user" />
-                <input type="button" value="Delete" onclick="" class="btn btn-danger btn-user" />
+                <input type="button" value="Update" onclick="update_user();" class="btn btn-warning btn-user" />
+                <input type="button" value="Delete" onclick="delete_user();" class="btn btn-danger btn-user" />
                 
               </form>
             </div>
@@ -188,7 +212,7 @@
                 <h4 class="mb"><i class="fa fa-angle-right"></i> Room Table</h4>
                 <form class="form-inline" role="form">
                     <div class="table Responsive">
-                    <table id="" class="table table-bordered" width="100%" cellspacing="0">
+                    <table id="roomTable" class="table table-bordered" width="100%" cellspacing="0">
                         <tr>
                         <td>#ID</td>
                         <td>Type</td>
@@ -248,6 +272,99 @@
   <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
   <script src="lib/form-component.js"></script>
+  
+  <script>
+  var roomTable = document.getElementById('roomTable');
+  var databaseRef = firebase.database().ref('room/');
+  var rowIndex = 1;
+  
+  databaseRef.once('value', function(snapshot) {
+	  snapshot.forEach(function(childSnapshot) {
+	  	var childKey = childSnapshot.key;
+	  	var childData = childSnapshot.val();
+	  	var row = roomTable.insertRow(rowIndex);
+	  	var cellId = row.insertCell(0);
+	  	var cellType = row.insertCell(1);
+	  	var cellNumber = row.insertCell(2);
+	  	var cellBed = row.insertCell(3);
+	  	var cellFloor = row.insertCell(4);
+	  	var cellPrice = row.insertCell(5);
+	  	var cellStatus = row.insertCell(6);
+	  	cellId.appendChild(document.createTextNode(childKey));
+	  	cellType.appendChild(document.createTextNode(childData.roomType));
+	  	cellNumber.appendChild(document.createTextNode(childData.roomNumber));
+	  	cellBed.appendChild(document.createTextNode(childData.roomBedType));
+	  	cellFloor.appendChild(document.createTextNode(childData.roomFloor));
+	  	cellPrice.appendChild(document.createTextNode(childData.roomPrice));
+	  	cellStatus.appendChild(document.createTextNode(childData.roomStatus));
+	  	rowIndex = rowIndex + 1;
+	  	});
+	  
+	  var table = document.getElementById("roomTable");
+	  var rows = table.getElementsByTagName("tr");
+	  for (i = 0; i < rows.length; i++) {
+	  var currentRow = table.rows[i];
+	  var createClickHandler = function(row) {
+	  return function() {
+	  var cell1 = row.getElementsByTagName("td")[0];
+	  var cell2 = row.getElementsByTagName("td")[1];
+	  var cell3 = row.getElementsByTagName("td")[2];
+	  var cell4 = row.getElementsByTagName("td")[3];
+	  var cell5 = row.getElementsByTagName("td")[4];
+	  var cell6 = row.getElementsByTagName("td")[5];
+	  var cell7 = row.getElementsByTagName("td")[6];
+	  var id = cell1.innerHTML;
+	  var room_type = cell2.innerHTML;
+	  var room_number = cell3.innerHTML;
+	  var room_bed_type = cell4.innerHTML;
+	  var room_floor = cell5.innerHTML;
+	  var room_price = cell6.innerHTML;
+	  var room_status = cell7.innerHTML;
+	  document.getElementById('uid').value = id;
+	  document.getElementById('roomType').value = room_type;
+	  document.getElementById('roomNumber').value = room_number;
+	  document.getElementById('roomBedType').value = room_bed_type;
+	  document.getElementById('roomFloor').value = room_floor;
+	  document.getElementById('roomPrice').value = room_price;
+	  document.getElementById('roomStatus').value = room_status;
+	  };
+	  };
+	  currentRow.onclick = createClickHandler(currentRow);
+	  }
+	  });
+	  function update_user(){
+		  var roomType = document.getElementById('roomType').value;
+		  var roomNumber = document.getElementById('roomNumber').value;
+		  var roomBedType = document.getElementById('roomBedType').value;
+		  var roomFloor = document.getElementById('roomFloor').value;
+		  var roomPrice = document.getElementById('roomPrice').value;
+		  var roomStatus = document.getElementById('roomStatus').value;
+		  var uid = document.getElementById('uid').value;
+	  var data = {
+			  roomType: roomType,
+			  roomNumber: roomNumber,
+			  roomBedType: roomBedType,
+			  roomFloor: roomFloor,
+			  roomPrice: roomPrice,
+			  roomStatus: roomStatus
+	  }
+	  var updates = {};
+	  updates['/room/' + uid] = data;
+	  firebase.database().ref().update(updates);
+	  alert('room updated successfully!');
+	  reload_page();
+	  }
+
+	  function delete_user(){
+	  var uid = document.getElementById('uid').value;
+	  firebase.database().ref().child('/room/' + uid).remove();
+	  alert('room deleted successfully!');
+	  reload_page();
+	  }
+	  function reload_page(){
+	  window.location.reload();
+	  }
+  </script>
 
 </body>
 

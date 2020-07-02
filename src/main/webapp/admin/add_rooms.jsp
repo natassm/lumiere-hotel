@@ -25,13 +25,31 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
   <script src="lib/chart-master/Chart.js"></script>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestone.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
 
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+		  apiKey: "AIzaSyDsQMve4d-H93DxtFNmL4honnXCQC4CP5U",
+		    authDomain: "lumiere-hotel.firebaseapp.com",
+		    databaseURL: "https://lumiere-hotel.firebaseio.com",
+		    projectId: "lumiere-hotel",
+		    storageBucket: "lumiere-hotel.appspot.com",
+		    messagingSenderId: "836998359051",
+		    appId: "1:836998359051:web:c82ab00adee1bc00b07f0e",
+		    measurementId: "G-CCNVD28W02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </head>
 
 <body>
@@ -138,48 +156,46 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Type</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomType" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Number</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomNumber" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Bed Type</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomBedType" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Floor</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomFloor" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomPrice" class="form-control">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Room Status</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control">
+                    <input type="text" id="roomStatus" class="form-control">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-theme">Add Room</button>
+                <input type="button" value="Add Room" onclick="save_user();" class="btn btn-theme"/>
               </form>
             </div>
           </div>
           <!-- col-lg-12-->
         </div>
         <!-- /row -->
-        
-        
         
         
       </section>
@@ -229,6 +245,67 @@
   <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
   <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
   <script src="lib/form-component.js"></script>
+  
+  <script>
+  var databaseRef = firebase.database().ref('room/');
+  function save_user(){
+	  var roomType = document.getElementById('roomType').value;
+	  var roomNumber = document.getElementById('roomNumber').value;
+	  var roomBedType = document.getElementById('roomBedType').value;
+	  var roomFloor = document.getElementById('roomFloor').value;
+	  var roomPrice = document.getElementById('roomPrice').value;
+	  var roomStatus = document.getElementById('roomStatus').value;
+	  
+	  var idKey = firebase.database().ref.child('room').push.key;
+	  
+	  var data = {
+			  roomType: roomType,
+			  roomNumber: roomNumber,
+			  roomBedType: roomBedType,
+			  roomFloor: roomFloor,
+			  roomPrice: roomPrice,
+			  roomStatus: roomStatus
+	  }
+	  
+	  var updates = {};
+	  updates['/room/' + idKey] = data;
+	  firebase.database().ref().update(updates);
+	  alert('room created successfully!');
+	  reload_page();
+	  }
+	  function reload_page(){
+	  window.location.reload();
+	  }
+  </script>
+  
+  <script>
+var databaseRef = firebase.database().ref('room/');
+function save_user(){
+var roomType = document.getElementById('roomType').value;
+var roomNumber = document.getElementById('roomNumber').value;
+var roomBedType = document.getElementById('roomBedType').value;
+var roomFloor = document.getElementById('roomFloor').value;
+var roomPrice = document.getElementById('roomPrice').value;
+var roomStatus = document.getElementById('roomStatus').value;
+var uid = firebase.database().ref().child('room').push().key;
+var data = {
+roomType: roomType,
+roomNumber: roomNumber,
+roomBedType: roomBedType,
+roomFloor: roomFloor,
+roomPrice: roomPrice,
+roomStatus: roomStatus
+}
+var updates = {};
+updates['/room/' + uid] = data;
+firebase.database().ref().update(updates);
+alert('room created successfully!');
+reload_page();
+}
+function reload_page(){
+window.location.reload();
+}
+</script>
 
 </body>
 
