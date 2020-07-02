@@ -287,5 +287,95 @@
     
     <jsp:include page="layouts/scripts.jsp"></jsp:include> 
     
+     var requestCITable = document.getElementById('requestCIT');
+ var databaseRefCI = firebase.database().ref('checkinRequest/');
+ var rowIndex = 1;
+  
+ databaseRefCI.once('value', function(snapshot) {
+	 snapshot.forEach(function(childSnapshot) {
+	  	var childKey = childSnapshot.key;
+	  	var childData = childSnapshot.val();
+	  	var row = requestCITable.insertRow(rowIndex);
+	  	var cellId = row.insertCell(0);
+	  	var cellName = row.insertCell(1);
+	  	var cellPhone = row.insertCell(2);
+	  	var cellEmail = row.insertCell(3);
+	  	var cellCheckinDate = row.insertCell(4);
+	  	var cellCheckoutDate = row.insertCell(5);
+	  	var cellRoomType = row.insertCell(6);
+	  	cellId.appendChild(document.createTextNode(childKey));
+	  	cellName.appendChild(document.createTextNode(childData.name));
+	  	cellPhone.appendChild(document.createTextNode(childData.phone));
+	  	cellEmail.appendChild(document.createTextNode(childData.email));
+	  	cellCheckinDate.appendChild(document.createTextNode(childData.checkinDate));
+	  	cellCheckoutDate.appendChild(document.createTextNode(childData.checkoutDate));
+	  	cellRoomType.appendChild(document.createTextNode(childData.roomType));
+	  	rowIndex = rowIndex + 1;
+	  	});
+	  
+	  var table = document.getElementById("requestCIT");
+	  var rows = table.getElementsByTagName("tr");
+	  for (i = 0; i < rows.length; i++) {
+	  var currentRow = table.rows[i];
+	  var createClickHandler = function(row) {
+	  return function() {
+	  var cell1 = row.getElementsByTagName("td")[0];
+	  var cell2 = row.getElementsByTagName("td")[1];
+	  var cell3 = row.getElementsByTagName("td")[2];
+	  var cell4 = row.getElementsByTagName("td")[3];
+	  var cell5 = row.getElementsByTagName("td")[4];
+	  var cell6 = row.getElementsByTagName("td")[5];
+	  var cell7 = row.getElementsByTagName("td")[6];
+	  var id = cell1.innerHTML;
+	  var guest_name = cell2.innerHTML;
+	  var guest_phone = cell3.innerHTML;
+	  var guest_email = cell4.innerHTML;
+	  var checkin_date = cell5.innerHTML;
+	  var checkout_date = cell6.innerHTML;
+	  var room_type = cell7.innerHTML;
+	  document.getElementById('guestName').value = guest_name;
+	  document.getElementById('guestPhone').value = guest_phone;
+	  document.getElementById('guestEmail').value = guest_email;
+	  document.getElementById('checkinDate').value = checkin_date;
+	  document.getElementById('checkoutDate').value = checkout_date;
+	  document.getElementById('roomType').value = room_type;
+	  };
+	  };
+	  currentRow.onclick = createClickHandler(currentRow);
+	  }
+	  });
+ function update_user(){
+	  var roomType = document.getElementById('roomType').value;
+	  var roomNumber = document.getElementById('roomNumber').value;
+	  var roomBedType = document.getElementById('roomBedType').value;
+	  var roomFloor = document.getElementById('roomFloor').value;
+	  var roomPrice = document.getElementById('roomPrice').value;
+	  var roomStatus = document.getElementById('roomStatus').value;
+	  var uid = document.getElementById('uid').value;
+ var data = {
+		  roomType: roomType,
+		  roomNumber: roomNumber,
+		  roomBedType: roomBedType,
+		  roomFloor: roomFloor,
+		  roomPrice: roomPrice,
+		  roomStatus: roomStatus
+ }
+ var updates = {};
+ updates['/room/' + uid] = data;
+ firebase.database().ref().update(updates);
+ alert('room updated successfully!');
+ reload_page();
+ }
+
+ function delete_user(){
+ var uid = document.getElementById('uid').value;
+ firebase.database().ref().child('/room/' + uid).remove();
+ alert('room deleted successfully!');
+ reload_page();
+ }
+ function reload_page(){
+ window.location.reload();
+ }
+    
   </body>
 </html>

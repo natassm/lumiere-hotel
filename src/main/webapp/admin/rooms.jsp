@@ -202,7 +202,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Room Price</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Room Price (/night)</label>
                   <div class="col-sm-10">
                     <input type="text" id="roomPrice" class="form-control" readonly="readonly">
                   </div>
@@ -210,7 +210,11 @@
                 <div class="form-group">
                     <label class="col-sm-2 col-sm-2 control-label">Room Status</label>
                     <div class="col-sm-10">
-                      <input type="text" id="roomStatus" class="form-control">
+                    <select id="roomStatus" class="form-control">
+<option value="">Choose Room Status</option>
+<option value="Available">Available</option>
+<option value="Unavailable">Unavailable</option>
+</select>
                     </div>
                   </div>
                 <input type="button" value="Update" onclick="update_user();" class="btn btn-warning btn-user" />

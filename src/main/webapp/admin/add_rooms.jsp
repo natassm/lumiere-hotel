@@ -220,8 +220,8 @@
                   <div class="col-sm-10">
                   <select id="roomStatus" class="form-control">
 <option value="">Choose Room Status</option>
-<option value="0">0</option>
-<option value="1">1</option>
+<option value="Available">Available</option>
+<option value="Unavailable">Unavailable</option>
 </select>
                   </div>
                 </div>
